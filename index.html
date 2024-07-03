@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Eletrônico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="btn">
+            <div class="cab">
+              <header>CAIXA ELETRÔNICO</header>
+              <p>Selecione uma opção:</p>
+            </div>
+            <div class="dep">
+                <input type="button" value="Depositar" id="p1" onclick="dep()">
+                <input type="button" value="Saque" id="p2" onclick="saque()">
+                <input type="button" value="Saldo" id="p3" onclick="exibirSaldo()">
+                <input type="button" value="Sair" id="p4" onclick="sair()">
+            </div>
+            <div class="center-bot" id="center-bot">
+            </div>
+        </div>
+       
+        <div class="janela-modal" id="janela-modal" >
+            <div class="modal">
+                <button class="fechar" id="fechar">X</button>
+                <h1 id="jm"></h1>
+              <div id="val-geral">
+                <input type="number" id="val" onclick="formatarCampoValor()">
+              </div>
+              <div id="vvr"></div>
+              <div class="numeros" id="numeros">
+                    <p><input type="button" value="1" id="1" onclick="adicionarNumero(1)"></p>
+                    <p><input type="button" value="2" id="2" onclick="adicionarNumero(2)"></p>
+                    <p><input type="button" value="3" id="3" onclick="adicionarNumero(3)"></p>
+                    <p><input type="button" value="4" id="4" onclick="adicionarNumero(4)"></p>
+                    <p><input type="button" value="5" id="5" onclick="adicionarNumero(5)"></p>
+                    <p><input type="button" value="6" id="6" onclick="adicionarNumero(6)"></p>
+                    <p><input type="button" value="7" id="7" onclick="adicionarNumero(7)"></p>
+                    <p><input type="button" value="8" id="8" onclick="adicionarNumero(8)"></p>
+                    <p><input type="button" value="9" id="9" onclick="adicionarNumero(9)"></p>
+                    <p><input type="button" value="X" id="del" onclick="deletarNumero()"></p>
+                    <p><input type="button" value="0" id="0" onclick="adicionarNumero(0)"></p>
+              </div>
+              <div id="tot"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

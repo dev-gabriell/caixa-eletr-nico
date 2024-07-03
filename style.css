@@ -1,0 +1,327 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background: rgb(73, 38, 15);
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    background: rgb(255, 81, 0);
+    width: 350px;
+    height: 300px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    margin-left: 25px;
+    width: 200px;
+    height: 200%;
+    background: linear-gradient(180deg, #002dc2, #e0e5ff);
+    animation: animete 3s linear infinite;
+}
+.btn::after{
+    content: "";
+    position: absolute;
+    background: rgb(255, 81, 0);
+    inset: 5px;
+    border-radius: inherit;
+}
+@keyframes animete {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.cab header {
+    font-weight: 800;
+}
+.cab{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 2;
+}
+
+.dep{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.dep input{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    margin: 10px;
+}
+
+.center-bot{
+    display: flex;
+    justify-content: center;  
+    z-index: 2;
+}
+#info{
+    flex-direction: column;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+#botao1{
+    width: 50px;
+    height: 30px;
+    background: rgb(20, 20, 179);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#p1, #p2, #p3, #p4{
+    background: rgb(20, 20, 179);
+    height: 45px;
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+    border: solid 2px #fff;
+    cursor: pointer;
+}
+#p1:hover{
+    background: rgb(5, 5, 63);
+    transition: 0.5s ease-in-out;
+}
+#p2:hover{
+    background: rgb(5, 5, 63);
+    transition: 0.5s ease-in-out;
+}
+#p3:hover{
+    background: rgb(5, 5, 63);
+    transition: 0.5s ease-in-out;
+}
+#p4:hover{
+    background: rgb(5, 5, 63);
+    transition: 0.5s ease-in-out;
+}
+
+.janela-modal{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.514);
+}
+
+#jm{
+    display: flex;
+    justify-content: center;
+}
+#tot{
+    display: flex;
+    justify-content: center;
+}
+.modal{
+    width: 60%;
+    min-width: 450px;
+    min-height: 200px;
+    background: #ffffff83;
+    backdrop-filter: blur(5px);
+    padding: 50px;
+    border-radius: 20px;
+}
+.fechar{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.janela-modal.abrir{
+    display: flex;
+}
+
+@keyframes abrirmodal{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.abrir .modal{
+    animation: abrirmodal  0.5s;
+}
+
+.input-error {
+    border: 2px solid red;
+}
+
+#val-geral {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#val{
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+}
+.numeros{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 260px; 
+    margin: auto;
+}
+.numeros input{
+   width: 80px;
+   height: 80px;
+   color: #fff;
+   background: rgb(17, 17, 161);
+   font-size: 25px;
+}
+.numeros input:hover{
+    background: rgb(9, 9, 99);
+    cursor: pointer;
+}
+
+.numeros p {
+    margin: 5px;
+    width: calc(33.3333% - 10px);
+    box-sizing: border-box;
+}
+#del{
+    background: rgb(238, 238, 238);
+    font-weight: 700;
+    color: #000;
+}
+#enter, #saq{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(5, 88, 5);
+    color: #fff;
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
+}
+#enter:hover {
+    background: rgb(0, 66, 0);
+    cursor: pointer;
+}
+#saq:hover {
+    background: rgb(0, 66, 0);
+    cursor: pointer;
+}
+
+@media (min-width: 200px) and (max-width: 599px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        width: 1px;
+    }
+
+    .header, .dep, .numeros {
+        margin-bottom: 10px;
+    }
+
+    input[type="button"] {
+        font-size: 14px;
+    }
+
+    .numeros input[type="button"] {
+        display: none;
+    }
+    .modal{
+       width: 30%;
+       margin-left: 20px;
+       min-width: 1px;
+       min-height: 20px;
+    }
+    .btn{
+        width: 200px;
+        height: 430px; 
+        margin-left: 12%;
+    }
+    .btn::before{
+        content: "";
+        position: absolute;
+        margin-left: 25px;
+        width: 100px;
+        height: 200%;
+        background: linear-gradient(180deg, #002dc2, #e0e5ff);
+        animation: animete 3s linear infinite;
+    }
+    .btn::after{
+        content: "";
+        position: absolute;
+        background: rgb(255, 81, 0);
+        inset: 5px;
+        border-radius: inherit;
+    }
+    .janela-modal{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        top: -5%;
+        left: 5%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.514);
+    }
+    .modal{
+        margin-top: 50px;
+        margin-left: 10px;
+    }
+    .center-bot{
+        font-size: 17px;
+    }
+    .cab p {
+        font-size: 16px;
+    } 
+}
+
+@media (max-width: 600px) {
+    .container{
+        width: 80%;
+        padding: 15px;
+    }    
+    .header, .dep, .numeros {
+        margin-bottom: 15px;
+    }
+    input[type="button"] {
+        font-size: 14px;
+    }
+
+}
+
